@@ -5,4 +5,5 @@
 Locate within this folder the .exe called **LightPuzzle.exe** in order to play the game.
 ## Controls
 Left Click - Interact with Boxes and Menus
+
 ESC - Exit the Game (While in a Level)
