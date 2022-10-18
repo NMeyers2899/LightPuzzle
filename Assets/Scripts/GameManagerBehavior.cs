@@ -10,7 +10,7 @@ public class GameManagerBehavior : MonoBehaviour
 
     [SerializeField]
     [Tooltip("The boxes in the current scene.")]
-    private List<MeshRenderer> _boxes;
+    private List<LightBoxBehavior> _boxes;
 
     [SerializeField]
     [Tooltip("The screen that appears when the player completes a level.")]
@@ -23,14 +23,14 @@ public class GameManagerBehavior : MonoBehaviour
     {
         if (_levelCompleted)
         {
-            
+            _winScreen.enabled = true;
             return;
         }
 
-        foreach (MeshRenderer box in _boxes)
+        foreach (LightBoxBehavior box in _boxes)
         {
             // If any box in the scene does not have the on material, the level is not complete.
-            if (box.material != _onMaterial)
+            if (!box.LightIsOn)
                 return;       
         }
 

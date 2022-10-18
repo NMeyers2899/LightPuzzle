@@ -24,6 +24,11 @@ public class LightBoxBehavior : MonoBehaviour
     private RadiusBehavior _radius;
 
     /// <summary>
+    /// Determines whether or not the light is on or off.
+    /// </summary>
+    public bool LightIsOn { get { return _lightIsOn; } }
+
+    /// <summary>
     /// Turns the light on or off depending on its current state.
     /// </summary>
     public void ToggleLight()
