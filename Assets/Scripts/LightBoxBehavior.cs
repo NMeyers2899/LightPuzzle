@@ -17,7 +17,7 @@ public class LightBoxBehavior : MonoBehaviour
 
     [SerializeField]
     [Tooltip("Determines whether or not the light is on or off.")]
-    private bool _lightIsOn;
+    private bool _lightIsOn = false;
 
     [SerializeField]
     [Tooltip("The radius aroudn the box that will determine its neighbors.")]

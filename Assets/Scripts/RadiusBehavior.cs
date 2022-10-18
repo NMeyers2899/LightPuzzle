@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RadiusBehavior : MonoBehaviour
 {
+    [SerializeField]
     [Tooltip("The nearby boxes that this can influence.")]
     private List<RadiusBehavior> _nearbyBoxes;
 
@@ -20,11 +21,6 @@ public class RadiusBehavior : MonoBehaviour
     /// The box this radius is attached to.
     /// </summary>
     public LightBoxBehavior AttachedBox { get { return _attachedBox; } }
-
-    private void Awake()
-    {
-        _nearbyBoxes = new List<RadiusBehavior>();
-    }
 
     /// <summary>
     /// Turns each light nearby this light on or off depending on its current state.
