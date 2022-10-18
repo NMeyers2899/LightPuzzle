@@ -65,6 +65,9 @@ public class GameManagerBehavior : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKey(KeyCode.Escape))
+            QuitGame();
+
         // If the level is completed...
         if (_levelCompleted)
         {
