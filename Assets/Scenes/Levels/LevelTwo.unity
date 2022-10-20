@@ -371,6 +371,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2564704099147480956, guid: 95c7e0cee7d849a40bcd7c9a81d03597, type: 3}
   m_PrefabInstance: {fileID: 215056661}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &215056663 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 59948238499510228, guid: 95c7e0cee7d849a40bcd7c9a81d03597, type: 3}
+  m_PrefabInstance: {fileID: 215056661}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12b5f897321e62b489529e56f2c10d2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &379011071
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,7 +698,7 @@ PrefabInstance:
     - target: {fileID: 5973120617228621643, guid: e70eab085b393a54bb31b81ca62c9a21, type: 3}
       propertyPath: _boxes.Array.data[5]
       value: 
-      objectReference: {fileID: 55742584}
+      objectReference: {fileID: 215056663}
     - target: {fileID: 5973120617228621643, guid: e70eab085b393a54bb31b81ca62c9a21, type: 3}
       propertyPath: _boxes.Array.data[6]
       value: 
