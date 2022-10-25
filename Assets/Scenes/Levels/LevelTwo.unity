@@ -1059,6 +1059,10 @@ PrefabInstance:
       propertyPath: _lightIsOn
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 59948238499510228, guid: 95c7e0cee7d849a40bcd7c9a81d03597, type: 3}
+      propertyPath: _onMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: d5e0c9d87f3d21941b528a6232225732, type: 2}
     - target: {fileID: 1366510275611077425, guid: 95c7e0cee7d849a40bcd7c9a81d03597, type: 3}
       propertyPath: _nearbyBoxes.Array.size
       value: 2
@@ -1266,6 +1270,10 @@ PrefabInstance:
       propertyPath: _lightIsOn
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 59948238499510228, guid: 95c7e0cee7d849a40bcd7c9a81d03597, type: 3}
+      propertyPath: _onMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: a00db583faf053548a968c526d68962c, type: 2}
     - target: {fileID: 1366510275611077425, guid: 95c7e0cee7d849a40bcd7c9a81d03597, type: 3}
       propertyPath: _nearbyBoxes.Array.size
       value: 3

@@ -6,10 +6,6 @@ using UnityEngine.SceneManagement;
 public class GameManagerBehavior : MonoBehaviour
 {
     [SerializeField]
-    [Tooltip("The material that denotes light boxes as on.")]
-    private Material _onMaterial;
-
-    [SerializeField]
     [Tooltip("The boxes in the current scene.")]
     private List<LightBoxBehavior> _boxes;
 

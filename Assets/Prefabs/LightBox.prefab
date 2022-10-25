@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9942e49a0bff10439ed014cde6ab0c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _nearbyBoxes: []
   _attachedBox: {fileID: 59948238499510228}
 --- !u!1 &5009827361828297734
 GameObject:
@@ -252,4 +253,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _offMaterial: {fileID: 2100000, guid: feb23f93541f985488b861fe445108da, type: 2}
   _onMaterial: {fileID: 2100000, guid: 585adf09c9aa38c4d8b67e483bb746ba, type: 2}
+  _lightIsOn: 0
   _radius: {fileID: 1366510275611077425}

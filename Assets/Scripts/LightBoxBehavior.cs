@@ -5,12 +5,8 @@ using UnityEngine;
 public class LightBoxBehavior : MonoBehaviour
 {
     [SerializeField]
-    [Tooltip("The material that represents the light being turned off.")]
-    private Material _offMaterial;
-
-    [SerializeField]
-    [Tooltip("The material that represents the light being turned on.")]
-    private Material _onMaterial;
+    [Tooltip("The material that represents the light being turned off or on.")]
+    private Material _offMaterial, _onMaterial;
 
     [Tooltip("The mesh renderer for the object.")]
     private MeshRenderer _meshRenderer;
@@ -22,6 +18,11 @@ public class LightBoxBehavior : MonoBehaviour
     [SerializeField]
     [Tooltip("The radius aroudn the box that will determine its neighbors.")]
     private RadiusBehavior _radius;
+
+    /// <summary>
+    /// The material that represents the light being turned off or on.
+    /// </summary>
+    public Material OnMaterial { get { return _onMaterial; } }
 
     /// <summary>
     /// Determines whether or not the light is on or off.

@@ -29,7 +29,10 @@ public class RadiusBehavior : MonoBehaviour
     {
         // Toggles the light for each nearby box.
         foreach (RadiusBehavior box in _nearbyBoxes)
+        {
             box.AttachedBox.ToggleLight();
+        }
+            
     }
 
     private void OnTriggerEnter(Collider other)
