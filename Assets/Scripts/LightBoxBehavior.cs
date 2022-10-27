@@ -37,6 +37,13 @@ public class LightBoxBehavior : MonoBehaviour
         _lightIsOn = !_lightIsOn;
     }
 
+    public void ChangeMaterial(Material other)
+    {
+        Vector4 newColor = other.GetColor("_BaseColor");
+
+        _onMaterial.SetColor("_BaseColor", newColor);
+    }
+
     private void Awake()
     {
         _meshRenderer = GetComponent<MeshRenderer>();
@@ -47,7 +54,7 @@ public class LightBoxBehavior : MonoBehaviour
         if(_lightIsOn)
             _meshRenderer.material = _onMaterial;
         else
-            _meshRenderer.material = _offMaterial;
+            _meshRenderer.material.SetColor("_BaseColor", Vector4({ 0.0f, 0.0f, 0.0f, 1.0f}));
     }
 
     private void OnMouseDown()

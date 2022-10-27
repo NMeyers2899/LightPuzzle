@@ -30,6 +30,9 @@ public class RadiusBehavior : MonoBehaviour
         // Toggles the light for each nearby box.
         foreach (RadiusBehavior box in _nearbyBoxes)
         {
+            Material boxMaterial = AttachedBox.GetComponent<Renderer>().material;
+
+            box.AttachedBox.ChangeMaterial(boxMaterial);
             box.AttachedBox.ToggleLight();
         }
             

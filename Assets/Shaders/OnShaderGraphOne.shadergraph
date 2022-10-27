@@ -2,7 +2,11 @@
     "m_SGVersion": 2,
     "m_Type": "UnityEditor.ShaderGraph.GraphData",
     "m_ObjectId": "f18c6b2f75ed4d178cca3b77a8cad6b6",
-    "m_Properties": [],
+    "m_Properties": [
+        {
+            "m_Id": "e47b080b4abb48ec9551574439d98475"
+        }
+    ],
     "m_Keywords": [],
     "m_Nodes": [
         {
@@ -147,9 +151,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -733.0,
-            "y": -106.00001525878906,
-            "width": 208.0,
+            "x": -746.9999389648438,
+            "y": 75.0,
+            "width": 207.99998474121095,
             "height": 362.0
         }
     },
@@ -339,10 +343,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -883.0,
-            "y": 11.999977111816407,
-            "width": 126.00000762939453,
-            "height": 173.00001525878907
+            "x": -896.9999389648438,
+            "y": 192.99998474121095,
+            "width": 125.99999237060547,
+            "height": 172.99998474121095
         }
     },
     "m_Slots": [
@@ -729,6 +733,29 @@
         "m_SerializableColors": []
     },
     "m_SerializedDescriptor": "VertexDescription.Normal"
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector4ShaderProperty",
+    "m_ObjectId": "e47b080b4abb48ec9551574439d98475",
+    "m_Guid": {
+        "m_GuidSerialized": "9238fda9-e770-4647-881a-71cc35dee21a"
+    },
+    "m_Name": "Color",
+    "m_DefaultReferenceName": "Vector4_e47b080b4abb48ec9551574439d98475",
+    "m_OverrideReferenceName": "_BaseColor",
+    "m_GeneratePropertyBlock": true,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    }
 }
 
 {
