@@ -75,7 +75,7 @@ public class GameManagerBehavior : MonoBehaviour
         foreach (LightBoxBehavior box in _boxes)
         {
             // If any box in the scene does not have the on material, the level is not complete.
-            if (!box.LightIsOn)
+            if (box.LightIsOn == 0)
                 return;       
         }
 

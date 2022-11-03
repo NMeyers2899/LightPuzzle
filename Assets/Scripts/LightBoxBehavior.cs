@@ -4,57 +4,55 @@ using UnityEngine;
 
 public class LightBoxBehavior : MonoBehaviour
 {
-    [SerializeField]
-    [Tooltip("The material that represents the light being turned off or on.")]
-    private Material _offMaterial, _onMaterial;
-
-    [Tooltip("The mesh renderer for the object.")]
+   [Tooltip("The mesh renderer for the object.")]
     private MeshRenderer _meshRenderer;
 
     [SerializeField]
-    [Tooltip("Determines whether or not the light is on or off.")]
-    private bool _lightIsOn = false;
+    [Tooltip("The base color of the object, or the color that will change the color of the boxes around it.")]
+    private Color _baseColor, _offset;
 
     [SerializeField]
-    [Tooltip("The radius aroudn the box that will determine its neighbors.")]
-    private RadiusBehavior _radius;
+    [Range(0, 1)]
+    [Tooltip("Determines whether or not the light is on or off.")]
+    private int _lightIsOn = 0;
 
-    /// <summary>
-    /// The material that represents the light being turned off or on.
-    /// </summary>
-    public Material OnMaterial { get { return _onMaterial; } }
+    [SerializeField]
+    [Tooltip("The radius around the box that will determine its neighbors.")]
+    private RadiusBehavior _radius;
 
     /// <summary>
     /// Determines whether or not the light is on or off.
     /// </summary>
-    public bool LightIsOn { get { return _lightIsOn; } }
+    public int LightIsOn { get { return _lightIsOn; } }
 
     /// <summary>
     /// Turns the light on or off depending on its current state.
     /// </summary>
     public void ToggleLight()
     {
-        _lightIsOn = !_lightIsOn;
+        _lightIsOn = (_lightIsOn == 1) ? 0 : 1;
     }
 
     public void ChangeMaterial(Material other)
     {
-        Vector4 newColor = other.GetColor("_BaseColor");
+        // Gathers the offset from the other color.
+        Color newOffset = other.GetColor("_Offset");
 
-        _onMaterial.SetColor("_BaseColor", newColor);
+        _meshRenderer.material.SetColor("_Offset", _offset + newOffset);
     }
 
     private void Awake()
     {
         _meshRenderer = GetComponent<MeshRenderer>();
+
+        // Sets the material's colors to the given ones on the box.
+        _meshRenderer.material.SetColor("_BaseColor", _baseColor);
+        _meshRenderer.material.SetColor("_Offset", _offset);
     }
 
     private void Update()
     {
-        if(_lightIsOn)
-            _meshRenderer.material = _onMaterial;
-        else
-            _meshRenderer.material.SetColor("_BaseColor", Vector4({ 0.0f, 0.0f, 0.0f, 1.0f}));
+        _meshRenderer.material.SetInt("_IsOn", _lightIsOn);
     }
 
     private void OnMouseDown()
