@@ -6,10 +6,6 @@ using UnityEngine.SceneManagement;
 public class GameManagerBehavior : MonoBehaviour
 {
     [SerializeField]
-    [Tooltip("The material that denotes light boxes as on.")]
-    private Material _onMaterial;
-
-    [SerializeField]
     [Tooltip("The boxes in the current scene.")]
     private List<LightBoxBehavior> _boxes;
 
@@ -79,7 +75,7 @@ public class GameManagerBehavior : MonoBehaviour
         foreach (LightBoxBehavior box in _boxes)
         {
             // If any box in the scene does not have the on material, the level is not complete.
-            if (!box.LightIsOn)
+            if (box.LightIsOn == 0)
                 return;       
         }
 
