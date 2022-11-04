@@ -7,7 +7,7 @@ public class LightBoxBehavior : MonoBehaviour
    [Tooltip("The mesh renderer for the object.")]
     private MeshRenderer _meshRenderer;
 
-    [SerializeField]
+
     [Tooltip("The base color of the object, or the color that will change the color of the boxes around it.")]
     private Color _baseColor, _offset;
 
@@ -44,6 +44,9 @@ public class LightBoxBehavior : MonoBehaviour
     private void Awake()
     {
         _meshRenderer = GetComponent<MeshRenderer>();
+
+        _baseColor = new Color(Random.Range(0.01f, 1.0f), Random.Range(0.01f, 1.0f), Random.Range(0.01f, 1.0f));
+        _offset = new Color(Random.Range(0.01f, 1.0f), Random.Range(0.01f, 1.0f), Random.Range(0.01f, 1.0f));
 
         // Sets the material's colors to the given ones on the box.
         _meshRenderer.material.SetColor("_BaseColor", _baseColor);
