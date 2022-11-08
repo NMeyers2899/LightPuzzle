@@ -51,8 +51,8 @@ public class LightBoxBehavior : MonoBehaviour
     {
         _meshRenderer = GetComponent<MeshRenderer>();
 
-        _baseColor = new Color(Random.Range(0.25f, 0.9f), Random.Range(0.25f, 0.9f), Random.Range(0.25f, 0.9f));
-        _offset = new Color(Random.Range(0.5f, 0.9f), Random.Range(0.5f, 0.9f), Random.Range(0.5f, 0.9f));
+        _baseColor = new Color(Random.Range(0.25f, 1.0f), Random.Range(0.25f, 1.0f), Random.Range(0.25f, 1.0f));
+        _offset = new Color(Random.Range(0.5f, 1.0f), Random.Range(0.5f, 1.0f), Random.Range(0.5f, 1.0f));
 
         // Sets the material's colors to the given ones on the box.
         _meshRenderer.material.SetColor("_BaseColor", _baseColor);
