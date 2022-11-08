@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class LightBoxBehavior : MonoBehaviour
 {
-   [Tooltip("The mesh renderer for the object.")]
+    [Tooltip("The mesh renderer for the object.")]
     private MeshRenderer _meshRenderer;
-
 
     [Tooltip("The base color of the object, or the color that will change the color of the boxes around it.")]
     private Color _baseColor, _offset;
@@ -26,11 +25,18 @@ public class LightBoxBehavior : MonoBehaviour
     public int LightIsOn { get { return _lightIsOn; } }
 
     /// <summary>
+    /// The color that will change the color of the boxes around it.
+    /// </summary>
+    public Color Offset { get { return _offset; } }
+
+    /// <summary>
     /// Turns the light on or off depending on its current state.
     /// </summary>
     public void ToggleLight()
     {
         _lightIsOn = (_lightIsOn == 1) ? 0 : 1;
+
+        _meshRenderer.material.SetInt("_IsOn", _lightIsOn);
     }
 
     public void ChangeMaterial(Material other)
@@ -45,16 +51,14 @@ public class LightBoxBehavior : MonoBehaviour
     {
         _meshRenderer = GetComponent<MeshRenderer>();
 
-        _baseColor = new Color(Random.Range(0.01f, 1.0f), Random.Range(0.01f, 1.0f), Random.Range(0.01f, 1.0f));
-        _offset = new Color(Random.Range(0.01f, 1.0f), Random.Range(0.01f, 1.0f), Random.Range(0.01f, 1.0f));
+        _baseColor = new Color(Random.Range(0.25f, 0.9f), Random.Range(0.25f, 0.9f), Random.Range(0.25f, 0.9f));
+        _offset = new Color(Random.Range(0.5f, 0.9f), Random.Range(0.5f, 0.9f), Random.Range(0.5f, 0.9f));
 
         // Sets the material's colors to the given ones on the box.
         _meshRenderer.material.SetColor("_BaseColor", _baseColor);
         _meshRenderer.material.SetColor("_Offset", _offset);
-    }
 
-    private void Update()
-    {
+        // Turns the light off by default.
         _meshRenderer.material.SetInt("_IsOn", _lightIsOn);
     }
 
